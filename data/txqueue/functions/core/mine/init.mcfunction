@@ -1,0 +1,17 @@
+data modify storage txqueue:mine length set value 16384
+data modify storage txqueue:mine head set value [{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}}]
+data modify storage txqueue:mine tail set value [{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}},{_:{_:3b}}]
+data modify storage txqueue:mine data set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[{_:[]}]._ set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[{_:[]}]._[{_:[]}]._ set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[{_:[]}]._[{_:[]}]._[{_:[]}]._ set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[{_:[]}]._[{_:[]}]._[{_:[]}]._[{_:[]}]._ set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[{_:[]}]._[{_:[]}]._[{_:[]}]._[{_:[]}]._[{_:[]}]._ set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[{_:[]}]._[{_:[]}]._[{_:[]}]._[{_:[]}]._[{_:[]}]._[{_:[]}]._ set value [{_:[]},{_:[]},{_:[]},{_:[]}]
+data modify storage txqueue:mine data[0] merge value {+:1b,-:1b}
+data modify storage txqueue:mine data[0]._[0] merge value {+:1b,-:1b}
+data modify storage txqueue:mine data[0]._[0]._[0] merge value {+:1b,-:1b}
+data modify storage txqueue:mine data[0]._[0]._[0]._[0] merge value {+:1b,-:1b}
+data modify storage txqueue:mine data[0]._[0]._[0]._[0]._[0] merge value {+:1b,-:1b}
+data modify storage txqueue:mine data[0]._[0]._[0]._[0]._[0]._[0] merge value {+:1b,-:1b}
+data modify storage txqueue:mine data[0]._[0]._[0]._[0]._[0]._[0]._[0] merge value {+:1b,-:1b}
