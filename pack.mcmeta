@@ -1,6 +1,6 @@
 {
     "pack": {
         "pack_format": 8,
-        "description": "データ移動のないQueueの実装"
+        "description": "データを抑えたQueueの実装"
     }
 }
