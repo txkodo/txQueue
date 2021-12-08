@@ -4,7 +4,7 @@
 最大格納数は4294967296
 
 ## データをキューに追加
-```
+```mcfunction
 # 追加するデータを storage txqueue: IO に入れ
 data modify storage txqueue: IO ...
 
@@ -16,7 +16,7 @@ function #txqueue:${name}.enqueue
 ※ ${name} はデフォルトだと main
 
 ## データをキューから取り出す
-```
+```mcfunction
 # ファンクションを実行
 function #txqueue:${name}.dequeue
 
