@@ -1,11 +1,11 @@
 # length -= 1
-execute store result storage txqueue:main length int 1 run data get storage txqueue:main length 0.99993896484375
+scoreboard players remove $main.len txqueue 1
 
 # データをtailから取得
-data modify storage txqueue:main IO set from storage txqueue:main value[{-:1b}]._[{-:1b}]._[{-:1b}]._[{-:1b}]._[{-:1b}]._[{-:1b}]._
+data modify storage txqueue: IO set from storage txqueue:main data[0][0][0][0][0][0]
 
-# tailを空に
-data modify storage txqueue:main value[{-:1b}]._[{-:1b}]._[{-:1b}]._[{-:1b}]._[{-:1b}]._[{-:1b}]._ set value {}
+# tailを削除
+data remove storage txqueue:main data[0][0][0][0][0][0]
 
 # tailを次の位置にずらす
 function txqueue:core/main/dequeue/1

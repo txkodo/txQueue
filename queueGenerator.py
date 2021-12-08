@@ -101,13 +101,13 @@ data modify storage txqueue:{name} {hs}[{j}]._._ set value 3b
 # {hs} マーカーを削除
 data remove storage txqueue:{name} value{(f"[{{{sign}:1b}}]._" * j)[:-1]}{sign}
 
-{f"""# 繰り下がりフラグ txqueue: borrow
+{f"""# 繰り上がりフラグ txqueue: borrow
 execute store success storage txqueue: borrow byte 1 if data storage txqueue:{name} {hs}[{j-1}]._{{_:0b}}
 
-# 繰り下がらない場合{hs}の位置を一つ手前に
+# 繰り上がらない場合{hs}の位置を一つ手前に
 execute if data storage txqueue: {{borrow:0b}} store result storage txqueue:{name} {hs}[{j-1}]._._ byte 0.75 run data get storage txqueue:{name} {hs}[{j-1}]._._
 
-# 繰り下がり処理
+# 繰り上がり処理
 execute if data storage txqueue: {{borrow:1b}} run function txqueue:core/{name}/{hs}/{i + 1}
 """ if i != order - 1 else f"""
 # インデックスが0だった場合4にする
