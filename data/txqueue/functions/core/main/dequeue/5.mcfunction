@@ -1,4 +1,4 @@
-### tail移動処理 4桁目
+### tail移動処理 5桁目
 
 # 繰り上がりフラグ txqueue: borrow
 execute store success storage txqueue: borrow byte 1 unless data storage txqueue:main data[0][0]
