@@ -46,4 +46,5 @@ genQueue('foo')
 ./LICENCE をご確認ください。
 
 #### 連絡先
-(twitter)[https://twitter.com/txkodo]
+TwitterのDMにお願いします！
+[Twitter@txkodo](https://twitter.com/txkodo)
