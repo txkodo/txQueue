@@ -90,13 +90,21 @@ execute if data storage txqueue: {{borrow:0b}} run data remove storage txqueue:{
   f"execute if data storage txqueue: {{borrow:1b}} run data remove storage txqueue:{name} data[0]"
 }'''
 
-  apiEnqueueFunc = f'''# キューにアイテムを追加
-# storage txqueue: IO にデータを入力
+  apiEnqueueFunc = f'''#> txqueue:api/{name}.enqueue
+# @input storage txqueue: IO キューに追加するデータを入れる
+# 
+# キューにアイテムを追加
+# 
+# @api
 execute store success storage txqueue: success byte 1 unless score ${name}.len txqueue matches 2147483647 run function txqueue:core/{name}/enqueue
 '''
 
-  apiDequeueFunc = f'''# キューからアイテムを取得
-# storage txqueue: IO にデータが入る
+  apiDequeueFunc = f'''#> txqueue:api/{name}.dequeue
+# @output storage txqueue: IO キューから取り出されたデータが入る
+# 
+# キューからアイテムを取得
+# 
+# @api
 execute store success storage txqueue: success byte 1 unless score ${name}.len txqueue matches -2147483648 run function txqueue:core/{name}/dequeue
 '''
 
