@@ -1,4 +1,7 @@
-from .queueGenerator import genQueue
+from queueGenerator import genQueue
 
 # デフォルトのmainキューの生成
-genQueue('main',6)
+genQueue('main')
+
+# ユーザー定義キュー "foo" の生成
+# genQueue('foo')
