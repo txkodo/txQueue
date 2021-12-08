@@ -40,3 +40,10 @@ genQueue('main')
 # ユーザー定義キュー "foo" の生成
 genQueue('foo')
 ```
+
+## ライセンスについて
+本データパックは MIT License を適用しています。
+./LICENCE をご確認ください。
+
+#### 連絡先
+(twitter)[https://twitter.com/txkodo]
